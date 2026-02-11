@@ -1,0 +1,16 @@
+<div class="app-container">
+  <h1>Angular 17 WebRTC Demo</h1>
+  <button (click)="startCall()">Start Call</button>
+
+<div class="video-container">
+  <video id="localVideo" autoplay playsinline muted></video>
+  <ng-container *ngIf="remoteStream; else waiting">
+    <video id="remoteVideo" autoplay playsinline></video>
+  </ng-container>
+  <ng-template #waiting>
+    <p>Waiting for remote peer to join…</p>
+  </ng-template>
+</div>
+
+  <app-stats></app-stats>
+</div>

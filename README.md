@@ -14,7 +14,11 @@ This repository contains:
 git clone https://github.com/karthik-ui/webrtc-angular.git
 cd webrtc-angular
 
-
+cd ..
+npx -p @angular/cli@21 ng new angular21-nosignals --routing --style=scss
+cd angular21-nosignals
+npm install
+npx -p @angular/cli@21 ng serve
 
 cd signaling-server
 npm install
@@ -24,6 +28,10 @@ npm install
 
 cd ../angular21-nosignals
 npm install
+
+
+
+
 
 
 cd signaling-server
